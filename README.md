@@ -1,4 +1,4 @@
-# 📊 ApexSales Analytics | SkillCred Sales Dashboard
+# 📊 SalesPulse Analytics | SkillCred Sales Dashboard
 
 A modern, high-performance **Sales & Performance Analytics Dashboard** built for the college project submission (*SkillCred*). It features a dark obsidian glassmorphism UI, real-time KPI metrics, dynamic date filtering, Supabase PL/pgSQL RPC database integration, Postman REST API collection, and CSV reporting exports.
 
@@ -9,7 +9,7 @@ A modern, high-performance **Sales & Performance Analytics Dashboard** built for
 
 ## 🔥 Key Features
 
-- ** Sleek Dark Obsidian Glassmorphism UI**: Custom UI design (*ApexSales Analytics*) featuring dark glass cards, glowing status pills, and responsive layout.
+- ** Sleek Dark Obsidian Glassmorphism UI**: Custom UI design (*SalesPulse Analytics*) featuring dark glass cards, glowing status pills, and responsive layout.
 - ** Dynamic Date Filter (`report_date`)**: Interactive header date picker allowing users to select any report date (e.g. `2026-05-30`, `2026-05-17`).
 - ** Real-Time KPI Summary Grid**: 
   - **Today Performance** (Orders & Revenue)

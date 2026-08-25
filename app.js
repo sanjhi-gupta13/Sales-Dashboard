@@ -491,7 +491,7 @@ function downloadCSV() {
   const encodedUri = encodeURI(csvContent);
   const link = document.createElement("a");
   link.setAttribute("href", encodedUri);
-  link.setAttribute("download", `ApexSales_Report_${selectedReportDate}.csv`);
+  link.setAttribute("download", `SalesPulse_Report_${selectedReportDate}.csv`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
