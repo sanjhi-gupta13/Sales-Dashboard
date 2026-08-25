@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "SkillCred Sales Dashboard - Supabase REST & RPC APIs",
+    "description": "Postman API Collection for querying Supabase tables and RPC functions for the SkillCred Sales Dashboard project.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "SUPABASE_URL",
+      "value": "https://izzruigfgaxvkltuzwlw.supabase.co",
+      "type": "string"
+    },
+    {
+      "key": "SUPABASE_ANON_KEY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml6enJ1aWdmZ2F4dmtsdHV6d2x3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc2NDkwNzMsImV4cCI6MjEwMzIyNTA3M30.4ofYgGzHWgFx_uausoqE9ToNlX1wbkSKcB1rqzJovos",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "RPC - Get Sales Dashboard Metrics",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "apikey", "value": "{{SUPABASE_ANON_KEY}}", "type": "text" },
+          { "key": "Authorization", "value": "Bearer {{SUPABASE_ANON_KEY}}", "type": "text" },
+          { "key": "Content-Type", "value": "application/json", "type": "text" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"report_date\": \"2026-05-30\"\n}"
+        },
+        "url": {
+          "raw": "{{SUPABASE_URL}}/rest/v1/rpc/get_sales_dashboard",
+          "host": ["{{SUPABASE_URL}}"],
+          "path": ["rest", "v1", "rpc", "get_sales_dashboard"]
+        }
+      }
+    },
+    {
+      "name": "Fetch Orders (sales_dashboard.orders)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "apikey", "value": "{{SUPABASE_ANON_KEY}}", "type": "text" },
+          { "key": "Authorization", "value": "Bearer {{SUPABASE_ANON_KEY}}", "type": "text" }
+        ],
+        "url": {
+          "raw": "{{SUPABASE_URL}}/rest/v1/orders?select=*",
+          "host": ["{{SUPABASE_URL}}"],
+          "path": ["rest", "v1", "orders"],
+          "query": [
+            { "key": "select", "value": "*" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fetch Users (sales_dashboard.users)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "apikey", "value": "{{SUPABASE_ANON_KEY}}", "type": "text" },
+          { "key": "Authorization", "value": "Bearer {{SUPABASE_ANON_KEY}}", "type": "text" }
+        ],
+        "url": {
+          "raw": "{{SUPABASE_URL}}/rest/v1/users?select=*",
+          "host": ["{{SUPABASE_URL}}"],
+          "path": ["rest", "v1", "users"],
+          "query": [
+            { "key": "select", "value": "*" }
+          ]
+        }
+      }
+    }
+  ]
+}

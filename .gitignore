@@ -1,0 +1,7 @@
+# Environment variables (do not commit actual tokens)
+.env
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.log
